@@ -14,6 +14,7 @@ The sample data set contains "," within some string values thus needs translatio
 ### Assumptions
 1. Elasticsearch is already installed and running;
 2. You know how to actually download, run bin/elasticsearch to bring it up at least locally in your machine
+3. Know where to find and download kibana and run bin/kibana
 
 ### Setup
 1. Download logstash [here](https://www.elastic.co/downloads/logstash)
