@@ -1,0 +1,683 @@
+{
+    "order": 100,
+    "template": "nsw-*",
+    "settings": {
+      "index": {
+        "number_of_shards": "1",
+        "number_of_replicas": "1"
+      }
+    },
+    "mappings": {
+      "_default_": {
+        "dynamic": true,
+        "_all": {
+          "enabled": true
+        },
+        "properties": {
+          "Division_or_SubDivision": {
+            "type": "keyword"
+          },
+          "Local_Govt_Area": {
+            "type": "keyword"
+          },
+          "Offence_Category": {
+            "type": "keyword"
+          },
+          "Subcategory": {
+            "type": "keyword"
+          },
+          "Jan-1995": {
+            "type": "integer"
+          },
+          "Feb-1995": {
+            "type": "integer"
+          },
+          "Mar-1995": {
+            "type": "integer"
+          },
+          "Apr-1995": {
+            "type": "integer"
+          },
+          "May-1995": {
+            "type": "integer"
+          },
+          "Jun-1995": {
+            "type": "integer"
+          },
+          "Jul-1995": {
+            "type": "integer"
+          },
+          "Aug-1995": {
+            "type": "integer"
+          },
+          "Sep-1995": {
+            "type": "integer"
+          },
+          "Oct-1995": {
+            "type": "integer"
+          },
+          "Nov-1995": {
+            "type": "integer"
+          },
+          "Dec-1995": {
+            "type": "integer"
+          },
+          "Jan-1996": {
+            "type": "integer"
+          },
+          "Feb-1996": {
+            "type": "integer"
+          },
+          "Mar-1996": {
+            "type": "integer"
+          },
+          "Apr-1996": {
+            "type": "integer"
+          },
+          "May-1996": {
+            "type": "integer"
+          },
+          "Jun-1996": {
+            "type": "integer"
+          },
+          "Jul-1996": {
+            "type": "integer"
+          },
+          "Aug-1996": {
+            "type": "integer"
+          },
+          "Sep-1996": {
+            "type": "integer"
+          },
+          "Oct-1996": {
+            "type": "integer"
+          },
+          "Nov-1996": {
+            "type": "integer"
+          },
+          "Dec-1996": {
+            "type": "integer"
+          },
+          "Jan-1997": {
+            "type": "integer"
+          },
+          "Feb-1997": {
+            "type": "integer"
+          },
+          "Mar-1997": {
+            "type": "integer"
+          },
+          "Apr-1997": {
+            "type": "integer"
+          },
+          "May-1997": {
+            "type": "integer"
+          },
+          "Jun-1997": {
+            "type": "integer"
+          },
+          "Jul-1997": {
+            "type": "integer"
+          },
+          "Aug-1997": {
+            "type": "integer"
+          },
+          "Sep-1997": {
+            "type": "integer"
+          },
+          "Oct-1997": {
+            "type": "integer"
+          },
+          "Nov-1997": {
+            "type": "integer"
+          },
+          "Dec-1997": {
+            "type": "integer"
+          },
+          "Jan-1998": {
+            "type": "integer"
+          },
+          "Feb-1998": {
+            "type": "integer"
+          },
+          "Mar-1998": {
+            "type": "integer"
+          },
+          "Apr-1998": {
+            "type": "integer"
+          },
+          "May-1998": {
+            "type": "integer"
+          },
+          "Jun-1998": {
+            "type": "integer"
+          },
+          "Jul-1998": {
+            "type": "integer"
+          },
+          "Aug-1998": {
+            "type": "integer"
+          },
+          "Sep-1998": {
+            "type": "integer"
+          },
+          "Oct-1998": {
+            "type": "integer"
+          },
+          "Nov-1998": {
+            "type": "integer"
+          },
+          "Dec-1998": {
+            "type": "integer"
+          },
+          "Jan-1999": {
+            "type": "integer"
+          },
+          "Feb-1999": {
+            "type": "integer"
+          },
+          "Mar-1999": {
+            "type": "integer"
+          },
+          "Apr-1999": {
+            "type": "integer"
+          },
+          "May-1999": {
+            "type": "integer"
+          },
+          "Jun-1999": {
+            "type": "integer"
+          },
+          "Jul-1999": {
+            "type": "integer"
+          },
+          "Aug-1999": {
+            "type": "integer"
+          },
+          "Sep-1999": {
+            "type": "integer"
+          },
+          "Oct-1999": {
+            "type": "integer"
+          },
+          "Nov-1999": {
+            "type": "integer"
+          },
+          "Dec-1999": {
+            "type": "integer"
+          },
+          "Jan-2000": {
+            "type": "integer"
+          },
+          "Feb-2000": {
+            "type": "integer"
+          },
+          "Mar-2000": {
+            "type": "integer"
+          },
+          "Apr-2000": {
+            "type": "integer"
+          },
+          "May-2000": {
+            "type": "integer"
+          },
+          "Jun-2000": {
+            "type": "integer"
+          },
+          "Jul-2000": {
+            "type": "integer"
+          },
+          "Aug-2000": {
+            "type": "integer"
+          },
+          "Sep-2000": {
+            "type": "integer"
+          },
+          "Oct-2000": {
+            "type": "integer"
+          },
+          "Nov-2000": {
+            "type": "integer"
+          },
+          "Dec-2000": {
+            "type": "integer"
+          },
+          "Jan-2001": {
+            "type": "integer"
+          },
+          "Feb-2001": {
+            "type": "integer"
+          },
+          "Mar-2001": {
+            "type": "integer"
+          },
+          "Apr-2001": {
+            "type": "integer"
+          },
+          "May-2001": {
+            "type": "integer"
+          },
+          "Jun-2001": {
+            "type": "integer"
+          },
+          "Jul-2001": {
+            "type": "integer"
+          },
+          "Aug-2001": {
+            "type": "integer"
+          },
+          "Sep-2001": {
+            "type": "integer"
+          },
+          "Oct-2001": {
+            "type": "integer"
+          },
+          "Nov-2001": {
+            "type": "integer"
+          },
+          "Dec-2001": {
+            "type": "integer"
+          },
+          "Jan-2002": {
+            "type": "integer"
+          },
+          "Feb-2002": {
+            "type": "integer"
+          },
+          "Mar-2002": {
+            "type": "integer"
+          },
+          "Apr-2002": {
+            "type": "integer"
+          },
+          "May-2002": {
+            "type": "integer"
+          },
+          "Jun-2002": {
+            "type": "integer"
+          },
+          "Jul-2002": {
+            "type": "integer"
+          },
+          "Aug-2002": {
+            "type": "integer"
+          },
+          "Sep-2002": {
+            "type": "integer"
+          },
+          "Oct-2002": {
+            "type": "integer"
+          },
+          "Nov-2002": {
+            "type": "integer"
+          },
+          "Dec-2002": {
+            "type": "integer"
+          },
+          "Jan-2003": {
+            "type": "integer"
+          },
+          "Feb-2003": {
+            "type": "integer"
+          },
+          "Mar-2003": {
+            "type": "integer"
+          },
+          "Apr-2003": {
+            "type": "integer"
+          },
+          "May-2003": {
+            "type": "integer"
+          },
+          "Jun-2003": {
+            "type": "integer"
+          },
+          "Jul-2003": {
+            "type": "integer"
+          },
+          "Aug-2003": {
+            "type": "integer"
+          },
+          "Sep-2003": {
+            "type": "integer"
+          },
+          "Oct-2003": {
+            "type": "integer"
+          },
+          "Nov-2003": {
+            "type": "integer"
+          },
+          "Dec-2003": {
+            "type": "integer"
+          },
+          "Jan-2004": {
+            "type": "integer"
+          },
+          "Feb-2004": {
+            "type": "integer"
+          },
+          "Mar-2004": {
+            "type": "integer"
+          },
+          "Apr-2004": {
+            "type": "integer"
+          },
+          "May-2004": {
+            "type": "integer"
+          },
+          "Jun-2004": {
+            "type": "integer"
+          },
+          "Jul-2004": {
+            "type": "integer"
+          },
+          "Aug-2004": {
+            "type": "integer"
+          },
+          "Sep-2004": {
+            "type": "integer"
+          },
+          "Oct-2004": {
+            "type": "integer"
+          },
+          "Nov-2004": {
+            "type": "integer"
+          },
+          "Dec-2004": {
+            "type": "integer"
+          },
+          "Jan-2005": {
+            "type": "integer"
+          },
+          "Feb-2005": {
+            "type": "integer"
+          },
+          "Mar-2005": {
+            "type": "integer"
+          },
+          "Apr-2005": {
+            "type": "integer"
+          },
+          "May-2005": {
+            "type": "integer"
+          },
+          "Jun-2005": {
+            "type": "integer"
+          },
+          "Jul-2005": {
+            "type": "integer"
+          },
+          "Aug-2005": {
+            "type": "integer"
+          },
+          "Sep-2005": {
+            "type": "integer"
+          },
+          "Oct-2005": {
+            "type": "integer"
+          },
+          "Nov-2005": {
+            "type": "integer"
+          },
+          "Dec-2005": {
+            "type": "integer"
+          },
+          "Jan-2006": {
+            "type": "integer"
+          },
+          "Feb-2006": {
+            "type": "integer"
+          },
+          "Mar-2006": {
+            "type": "integer"
+          },
+          "Apr-2006": {
+            "type": "integer"
+          },
+          "May-2006": {
+            "type": "integer"
+          },
+          "Jun-2006": {
+            "type": "integer"
+          },
+          "Jul-2006": {
+            "type": "integer"
+          },
+          "Aug-2006": {
+            "type": "integer"
+          },
+          "Sep-2006": {
+            "type": "integer"
+          },
+          "Oct-2006": {
+            "type": "integer"
+          },
+          "Nov-2006": {
+            "type": "integer"
+          },
+          "Dec-2006": {
+            "type": "integer"
+          },
+          "Jan-2007": {
+            "type": "integer"
+          },
+          "Feb-2007": {
+            "type": "integer"
+          },
+          "Mar-2007": {
+            "type": "integer"
+          },
+          "Apr-2007": {
+            "type": "integer"
+          },
+          "May-2007": {
+            "type": "integer"
+          },
+          "Jun-2007": {
+            "type": "integer"
+          },
+          "Jul-2007": {
+            "type": "integer"
+          },
+          "Aug-2007": {
+            "type": "integer"
+          },
+          "Sep-2007": {
+            "type": "integer"
+          },
+          "Oct-2007": {
+            "type": "integer"
+          },
+          "Nov-2007": {
+            "type": "integer"
+          },
+          "Dec-2007": {
+            "type": "integer"
+          },
+          "Jan-2008": {
+            "type": "integer"
+          },
+          "Feb-2008": {
+            "type": "integer"
+          },
+          "Mar-2008": {
+            "type": "integer"
+          },
+          "Apr-2008": {
+            "type": "integer"
+          },
+          "May-2008": {
+            "type": "integer"
+          },
+          "Jun-2008": {
+            "type": "integer"
+          },
+          "Jul-2008": {
+            "type": "integer"
+          },
+          "Aug-2008": {
+            "type": "integer"
+          },
+          "Sep-2008": {
+            "type": "integer"
+          },
+          "Oct-2008": {
+            "type": "integer"
+          },
+          "Nov-2008": {
+            "type": "integer"
+          },
+          "Dec-2008": {
+            "type": "integer"
+          },
+          "Jan-2009": {
+            "type": "integer"
+          },
+          "Feb-2009": {
+            "type": "integer"
+          },
+          "Mar-2009": {
+            "type": "integer"
+          },
+          "Apr-2009": {
+            "type": "integer"
+          },
+          "May-2009": {
+            "type": "integer"
+          },
+          "Jun-2009": {
+            "type": "integer"
+          },
+          "Jul-2009": {
+            "type": "integer"
+          },
+          "Aug-2009": {
+            "type": "integer"
+          },
+          "Sep-2009": {
+            "type": "integer"
+          },
+          "Oct-2009": {
+            "type": "integer"
+          },
+          "Nov-2009": {
+            "type": "integer"
+          },
+          "Dec-2009": {
+            "type": "integer"
+          },
+          "Jan-2010": {
+            "type": "integer"
+          },
+          "Feb-2010": {
+            "type": "integer"
+          },
+          "Mar-2010": {
+            "type": "integer"
+          },
+          "Apr-2010": {
+            "type": "integer"
+          },
+          "May-2010": {
+            "type": "integer"
+          },
+          "Jun-2010": {
+            "type": "integer"
+          },
+          "Jul-2010": {
+            "type": "integer"
+          },
+          "Aug-2010": {
+            "type": "integer"
+          },
+          "Sep-2010": {
+            "type": "integer"
+          },
+          "Oct-2010": {
+            "type": "integer"
+          },
+          "Nov-2010": {
+            "type": "integer"
+          },
+          "Dec-2010": {
+            "type": "integer"
+          },
+          "Jan-2011": {
+            "type": "integer"
+          },
+          "Feb-2011": {
+            "type": "integer"
+          },
+          "Mar-2011": {
+            "type": "integer"
+          },
+          "Apr-2011": {
+            "type": "integer"
+          },
+          "May-2011": {
+            "type": "integer"
+          },
+          "Jun-2011": {
+            "type": "integer"
+          },
+          "Jul-2011": {
+            "type": "integer"
+          },
+          "Aug-2011": {
+            "type": "integer"
+          },
+          "Sep-2011": {
+            "type": "integer"
+          },
+          "Oct-2011": {
+            "type": "integer"
+          },
+          "Nov-2011": {
+            "type": "integer"
+          },
+          "Dec-2011": {
+            "type": "integer"
+          },
+          "Jan-2012": {
+            "type": "integer"
+          },
+          "Feb-2012": {
+            "type": "integer"
+          },
+          "Mar-2012": {
+            "type": "integer"
+          },
+          "Apr-2012": {
+            "type": "integer"
+          },
+          "May-2012": {
+            "type": "integer"
+          },
+          "Jun-2012": {
+            "type": "integer"
+          },
+          "Jul-2012": {
+            "type": "integer"
+          },
+          "Aug-2012": {
+            "type": "integer"
+          },
+          "Sep-2012": {
+            "type": "integer"
+          },
+          "Oct-2012": {
+            "type": "integer"
+          },
+          "Nov-2012": {
+            "type": "integer"
+          },
+          "Dec-2012": {
+            "type": "integer"
+          },
+          "type": {
+            "type": "keyword"
+          }
+        }
+      }
+    }
+}

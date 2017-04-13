@@ -1,0 +1,159 @@
+[
+  {
+    "_id": "NSW-CrimeSet-Dashboard",
+    "_type": "dashboard",
+    "_source": {
+      "title": "NSW - CrimeSet Dashboard",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"id\":\"NSW-Crime-Metrics\",\"type\":\"visualization\",\"panelIndex\":1,\"size_x\":12,\"size_y\":2,\"col\":1,\"row\":1},{\"id\":\"NSW-Crime-Top-Offense-by-LGA\",\"type\":\"visualization\",\"panelIndex\":2,\"size_x\":4,\"size_y\":4,\"col\":5,\"row\":6},{\"id\":\"NSW-Crime-Top-Offense-by-Division\",\"type\":\"visualization\",\"panelIndex\":3,\"size_x\":4,\"size_y\":4,\"col\":9,\"row\":6},{\"id\":\"NSW-Crime-Top-Offences-by-Divisions\",\"type\":\"visualization\",\"panelIndex\":4,\"size_x\":6,\"size_y\":3,\"col\":7,\"row\":3},{\"id\":\"NSW-Crime-Top-Offences-and-Subcategories\",\"type\":\"visualization\",\"panelIndex\":5,\"size_x\":6,\"size_y\":3,\"col\":1,\"row\":3},{\"id\":\"NSW-Crime-Top-Offence-Subcategories\",\"type\":\"visualization\",\"panelIndex\":6,\"size_x\":6,\"size_y\":4,\"col\":7,\"row\":13},{\"id\":\"NSW-Crime-Top-Offence-Categories\",\"type\":\"visualization\",\"panelIndex\":7,\"size_x\":6,\"size_y\":4,\"col\":1,\"row\":13},{\"id\":\"NSW-Crime-Top-Divisions-with-Recorded-Offence\",\"type\":\"visualization\",\"panelIndex\":9,\"size_x\":12,\"size_y\":3,\"col\":1,\"row\":10},{\"id\":\"NSW-Crime-Top-Divisions-and-LGAs\",\"type\":\"visualization\",\"panelIndex\":10,\"size_x\":4,\"size_y\":4,\"col\":1,\"row\":6}]",
+      "optionsJSON": "{\"darkTheme\":false}",
+      "uiStateJSON": "{\"P-4\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}}",
+      "version": 1,
+      "timeRestore": false,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}}}]}"
+      }
+    }
+  },
+  {
+    "_id": "NSW-Crime-Top-Offences-by-Divisions",
+    "_type": "visualization",
+    "_source": {
+      "title": "NSW - Crime - Top Offences by Divisions",
+      "visState": "{\"title\":\"NSW - Crime - Top Offences by Divisions\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Event Count\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"Division_or_SubDivision\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Division\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"Offence_Category\",\"size\":1,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Top Offence Category\"}},{\"id\":\"4\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"Subcategory\",\"size\":1,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"nsw*\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "NSW-Crime-Top-Offense-by-LGA",
+    "_type": "visualization",
+    "_source": {
+      "title": "NSW - Crime - Top Offense by LGA",
+      "visState": "{\"title\":\"NSW - Crime - Top Offense by LGA\",\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"Offence_Category\",\"size\":50,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Offence Category\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"Local_Govt_Area\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Division\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"nsw*\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "NSW-Crime-Metrics",
+    "_type": "visualization",
+    "_source": {
+      "title": "NSW - Crime Metrics",
+      "visState": "{\"title\":\"NSW - Crime Metrics\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":60},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Total Records\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"Division_or_SubDivision\",\"customLabel\":\"Unique Divisions or Subdivisions\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"Local_Govt_Area\",\"customLabel\":\"Local Govt Areas\"}},{\"id\":\"4\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"Offence_Category\",\"customLabel\":\"Top Level Offence Categories\"}},{\"id\":\"5\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"Subcategory\",\"customLabel\":\"Offence Subcategories\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"nsw*\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "NSW-Crime-Top-Offences-and-Subcategories",
+    "_type": "visualization",
+    "_source": {
+      "title": "NSW - Crime - Top Offences and Subcategories",
+      "visState": "{\"title\":\"NSW - Crime - Top Offences and Subcategories\",\"type\":\"pie\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":true},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"Offence_Category\",\"size\":20,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Offence Category\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"Subcategory\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Offence Sub Category\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"nsw*\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "NSW-Crime-Top-Divisions-and-LGAs",
+    "_type": "visualization",
+    "_source": {
+      "title": "NSW - Crime - Top Divisions and LGAs",
+      "visState": "{\"title\":\"NSW - Crime - Top Divisions and LGAs\",\"type\":\"pie\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":true},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"Division_or_SubDivision\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Division\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"Local_Govt_Area\",\"size\":2,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"LGA\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"nsw*\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "NSW-Crime-Top-Offense-by-Division",
+    "_type": "visualization",
+    "_source": {
+      "title": "NSW - Crime - Top Offense by Division",
+      "visState": "{\"title\":\"NSW - Crime - Top Offense by Division\",\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"Offence_Category\",\"size\":50,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Offence Category\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"Division_or_SubDivision\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Division\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"nsw*\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "NSW-Crime-Top-Divisions-with-Recorded-Offence",
+    "_type": "visualization",
+    "_source": {
+      "title": "NSW - Crime - Top Divisions with Recorded Offence",
+      "visState": "{\"title\":\"NSW - Crime - Top Divisions with Recorded Offence\",\"type\":\"tagcloud\",\"params\":{\"scale\":\"linear\",\"orientation\":\"single\",\"minFontSize\":18,\"maxFontSize\":72},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"Division_or_SubDivision\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"nsw*\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "NSW-Crime-Top-LGA-with-Recorded-Offence",
+    "_type": "visualization",
+    "_source": {
+      "title": "NSW - Crime - Top LGA with Recorded Offence",
+      "visState": "{\"title\":\"NSW - Crime - Top LGA with Recorded Offence\",\"type\":\"tagcloud\",\"params\":{\"scale\":\"linear\",\"orientation\":\"single\",\"minFontSize\":18,\"maxFontSize\":72},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"Local_Govt_Area\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"nsw*\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "NSW-Crime-Top-Offence-Categories",
+    "_type": "visualization",
+    "_source": {
+      "title": "NSW - Crime - Top Offence Categories",
+      "visState": "{\"title\":\"NSW - Crime - Top Offence Categories\",\"type\":\"tagcloud\",\"params\":{\"scale\":\"linear\",\"orientation\":\"single\",\"minFontSize\":18,\"maxFontSize\":72},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"Offence_Category\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"nsw*\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "NSW-Crime-Top-Offence-Subcategories",
+    "_type": "visualization",
+    "_source": {
+      "title": "NSW - Crime - Top Offence Subcategories",
+      "visState": "{\"title\":\"NSW - Crime - Top Offence Subcategories\",\"type\":\"tagcloud\",\"params\":{\"scale\":\"linear\",\"orientation\":\"single\",\"minFontSize\":18,\"maxFontSize\":72},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"Subcategory\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"nsw*\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  }
+]
